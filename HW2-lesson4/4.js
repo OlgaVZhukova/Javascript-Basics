@@ -23,4 +23,15 @@
 Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const number = Number(prompt("Введите любое целое число:"));
+
+if ((number ^ 0) === number) {
+    const unit = number % 10;
+    const ten = Math.trunc(number / 10) % 10;
+    const hundred = Math.trunc(number / 100) % 10;
+    alert(
+        `В числе ${number} количество сотен: ${hundred}, десятков: ${ten}, единиц: ${unit}`
+    );
+} else {
+    alert("Вы ввели нецелое число.");
+}
