@@ -13,7 +13,11 @@
 в консоль "Одно или более значений некорректно.".
 */
 
-const positive = Number(prompt('Введите положительное число:'));
-const negative = Number(prompt('Введите отрицательное число:'));
+const positive = Number(prompt("Введите положительное число:"));
+const negative = Number(prompt("Введите отрицательное число:"));
 
-alert((positive > 0 && negative < 0) ? 'Все значения верные.' : 'Одно или более значений некорректно.');
+if (positive > 0 && negative < 0) {
+    alert("Все значения верные.");
+} else {
+    alert("Одно или более значений некорректно.");
+}
