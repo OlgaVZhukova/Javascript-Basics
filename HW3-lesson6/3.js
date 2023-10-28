@@ -10,4 +10,15 @@
 три числа. Проверять их не нужно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const firstNumber = Number(prompt("Введите первое число:"));
+const secondNumber = Number(prompt("Введите второе число:"));
+const thirdNumber = Number(prompt("Введите третье число:"));
+
+function findMaxValue(num1, num2, num3) {
+    return Math.max(num1, num2, num3);
+}
+
+alert(
+    `Максимальное значение среди чисел ${firstNumber}, ${secondNumber}, ${thirdNumber} 
+    равно ${findMaxValue(firstNumber, secondNumber, thirdNumber)}.`
+);
