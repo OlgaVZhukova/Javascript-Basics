@@ -9,4 +9,20 @@
 сообщение "Размер заработной платы за вычетом налогов равен N."
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const salaryNet = (money) => {
+    return money * 0.87;
+};
+
+const ammountSalaryGross = Number(
+    prompt("Введите сумму заработной платы gross:")
+);
+
+if (Number.isNaN(ammountSalaryGross) || ammountSalaryGross < 0) {
+    console.log("Значение задано неверно");
+} else {
+    console.log(
+        `Размер заработной платы за вычетом налогов равен ${salaryNet(
+      ammountSalaryGross
+    )}`
+    );
+}
