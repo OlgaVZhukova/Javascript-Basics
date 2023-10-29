@@ -14,4 +14,40 @@
 не окажется, значит нужно будет вывести пустой массив.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const array = [];
+for (let index = 0; index < 5; index++) {
+    array[index] = Math.round(Math.random() * 10);
+}
+
+console.log(array);
+
+let sumArray = 0;
+for (let index = 0; index < array.length; index++) {
+    sumArray += array[index];
+}
+
+console.log(`Сумма элементов массива: ${sumArray}`);
+
+let minNumArray = array[0];
+for (let index = 0; index < array.length; index++) {
+    if (array[index] < minNumArray) minNumArray = array[index];
+}
+
+console.log(`Минимальное значение в массиве: ${minNumArray}`);
+
+let count = 0;
+let indexesOfThrees = [];
+
+for (let index = 0; index < array.length; index++) {
+    if (array[index] === 3) {
+        count++;
+        indexesOfThrees.push(index);
+    }
+}
+
+if (count === 0) {
+    console.log("Троек в сгенерированном массиве нет");
+} else {
+    console.log("Новый массив:");
+    console.log(indexesOfThrees);
+}
